@@ -1,0 +1,15 @@
+<li [ngClass]="{'list-group-item':true,
+                'list-group-item-success':getColor() == 'green',
+                'list-group-item-danger': getColor() == 'red'}">
+
+<div class="row">
+  <div class="col-sm"><h2>{{unPost.title}}</h2></div>
+  <div class="col-sm"><h4 class="text-right">{{ lastUpdate | date: 'short'}}</h4></div>
+</div>
+               
+<p>
+  {{unPost.content}}
+</p>
+   <button type="button" class="btn btn-success" (click)="love()">Love it</button>
+   <button type="button" class="btn btn-danger" (click)="dontLove()">Don't love it</button>
+</li>
